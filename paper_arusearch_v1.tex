@@ -1,5 +1,10 @@
 \documentclass[twoside,a5paper,9pt]{extarticle}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% estructura base
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Autor: Alvaro Chirino, Fundación Aru 
+% Versión: Noviembre, 2024
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%% librerías base
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \usepackage[english,spanish]{babel}
 \usepackage{booktabs}
 \usepackage[utf8]{inputenc}
@@ -15,6 +20,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \usepackage{titling}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{fontawesome}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Opcional) Directorio para las figuras. Útil si se diferencia entre figuras con color (revista digital) y en blanco y negro (para impresión)
+\graphicspath{{_fig_col/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% librerías adicionales acá
 
@@ -35,7 +45,7 @@
 %%INCLUYA SU TÍTULO ACÁ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{\textbf{Título:} del documento\thanks{El contenido del presente documento es de responsabillidad de los autores y no compromete la opinión de Fundación ARU}}
+\title{\textbf{Título:} del documento\thanks{El contenido del presente documento es de responsabillidad de los autores y no compromete la opinión de Fundación ARU.}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%INCLUYA LOS AUTORES ACÁ
@@ -70,6 +80,7 @@ Su resumen acá
 \begin{tabular}{lp{10cm}}
 \textbf{Clasificación JEL:} & código 1, código 2, código 3, \ldots .\\% (https://www.aeaweb.org/econlit/jelCodes.php?view=jel)
 \textbf{Palabras clave}: & palabra 1, palabra 2, palabra 3, \ldots .\\
+\textbf{Repositorio de investigación \faGithub:} &  \url{https://github.com/ARUFoundation/AruSearch}
 \end{tabular}}
 
 \newpage
@@ -91,15 +102,27 @@ Here!
 \begin{tabular}{lp{10cm}}
 \textbf{JEL Classification:} & code 1, code 2, code 3, \ldots .\\% (https://www.aeaweb.org/econlit/jelCodes.php?view=jel)
 \textbf{Keywords}: & word 1, word 2, word 3, \ldots .\\
+\textbf{Research repository \faGithub:} &  \url{https://github.com/ARUFoundation/AruSearch}
 \end{tabular}}
 \selectlanguage{spanish} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% INCLUYA EL CONTENIDO DE SU DOCUMENTO DE INVESTIGACIÓN ACÁ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Introducción}
 
-El contenido acá \ldots
+El contenido acá \ldots, y una figura de ejemplo en \ref{f1}
+
+\begin{figure}[H]
+\center
+\caption{Ejemplo de figura}
+\begin{tabular}{l}
+\includegraphics[scale=0.3]{example1}\\
+\small{\textbf{Fuente:} \ldots}
+\end{tabular}
+\label{f1}	
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% INCLUYA EL NOMBRE DEL ARCHIVO .BIB "LAS REFERENCIAS DE SU DOCUMENTO" ACÁ:
